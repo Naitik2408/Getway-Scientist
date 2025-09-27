@@ -235,7 +235,7 @@ const Dashboard = () => {
 
 
   return (
-    <div className="p-6 space-y-8 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/30 min-h-screen">
+    <div className="p-6 space-y-8 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/30 min-h-full">
 
       {/* Enhanced Header */}
       <div className="mb-8">

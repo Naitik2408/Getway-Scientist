@@ -329,7 +329,7 @@ const Users = () => {
     const mostPopularMode = Object.entries(summaryStats.topMode).sort(([, a], [, b]) => b - a)[0]?.[0] || 'N/A';
 
     return (
-        <div className="p-4 lg:p-6 space-y-6 lg:space-y-8 bg-gradient-to-br from-slate-50 via-purple-50/40 to-blue-50/40 min-h-screen relative overflow-hidden">
+        <div className="p-4 lg:p-6 space-y-6 lg:space-y-8 bg-gradient-to-br from-slate-50 via-purple-50/40 to-blue-50/40 min-h-full relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[size:75px_75px] pointer-events-none"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>

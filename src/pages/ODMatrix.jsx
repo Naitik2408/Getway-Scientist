@@ -139,7 +139,7 @@ const ODMatrix = () => {
     };
 
     return (
-        <div className="p-4 md:p-6 space-y-6 bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen">
+        <div className="p-4 md:p-6 space-y-6 bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-full">
 
 
             {/* Enhanced Header with Info */}

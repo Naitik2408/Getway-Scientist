@@ -274,7 +274,7 @@ export const ErrorState = ({
 // Temporal specific skeleton
 export const TemporalSkeleton = () => {
     return (
-        <div className="p-6 space-y-6 bg-gradient-to-br from-blue-50/30 via-white to-teal-50/30 min-h-screen">
+        <div className="p-6 space-y-6 bg-gradient-to-br from-blue-50/30 via-white to-teal-50/30 min-h-full">
             {/* Header Skeleton */}
             <div className="mb-8">
                 <div className="flex items-center justify-between">
@@ -376,7 +376,7 @@ export const TemporalSkeleton = () => {
 // OD Matrix specific skeleton
 export const ODMatrixSkeleton = () => {
     return (
-        <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
+        <div className="p-6 space-y-6 bg-gray-50 min-h-full">
             {/* Header Skeleton */}
             <div className="mb-8">
                 <div className="flex items-center justify-between">
@@ -489,7 +489,7 @@ export const ODMatrixSkeleton = () => {
 // Demographics specific skeleton
 export const DemographicsSkeleton = () => {
     return (
-        <div className="p-6 space-y-6 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/30 min-h-screen">
+        <div className="p-6 space-y-6 bg-gradient-to-br from-purple-50/30 via-white to-blue-50/30 min-h-full">
             {/* Header Skeleton */}
             <div className="mb-8">
                 <div className="flex items-center justify-between">
