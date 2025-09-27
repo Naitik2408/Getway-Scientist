@@ -255,7 +255,7 @@ const SignUp = () => {
                       : 'border-slate-200 focus:border-blue-400 hover:border-slate-300'
                   }`}
                 />
-                <button
+                <div
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 transition-colors duration-200"
@@ -265,7 +265,7 @@ const SignUp = () => {
                   ) : (
                     <Eye className="h-5 w-5 text-slate-500" />
                   )}
-                </button>
+                </div>
               </div>
               {errors.password && <p className="text-sm text-red-600 font-medium">{errors.password}</p>}
             </div>
@@ -288,7 +288,7 @@ const SignUp = () => {
                       : 'border-slate-200 focus:border-blue-400 hover:border-slate-300'
                   }`}
                 />
-                <button
+                <div
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 transition-colors duration-200"
@@ -298,7 +298,7 @@ const SignUp = () => {
                   ) : (
                     <Eye className="h-5 w-5 text-slate-500" />
                   )}
-                </button>
+                </div>
               </div>
               {errors.confirmPassword && <p className="text-sm text-red-600 font-medium">{errors.confirmPassword}</p>}
             </div>

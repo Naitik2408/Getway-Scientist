@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useSmartPrefetch, usePerformanceMonitor, useBackgroundSync } from '../hooks/usePrefetchStrategies';
@@ -10,13 +10,9 @@ import {
     Car,
     Clock,
     Users,
-    TrendingUp,
     FileText,
-    AlertTriangle,
     User,
-    Settings,
     Menu,
-    ChevronDown,
     Calendar,
     LogOut,
     Activity

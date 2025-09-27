@@ -232,6 +232,22 @@ const SignIn = () => {
               </div>
             )}
 
+            {/* Demo Account Button */}
+            <Button 
+              type="button"
+              onClick={() => {
+                setFormData({
+                  identifier: 'aanchal@scientist.com',
+                  password: '@Scientist01'
+                });
+                setLoginType('email');
+                setErrors({});
+              }}
+              className="w-full h-12 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 mb-4"
+            >
+              Login as Demo Account
+            </Button>
+
             {/* Submit Button */}
             <Button 
               type="submit" 
