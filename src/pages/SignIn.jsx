@@ -48,7 +48,7 @@ const SignIn = () => {
     if (name === 'identifier') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       const phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
-      
+
       if (emailRegex.test(value)) {
         setLoginType('email');
       } else if (phoneRegex.test(value.replace(/\s+/g, ''))) {
@@ -92,20 +92,20 @@ const SignIn = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsLoading(true);
     setErrors({});
-    
+
     try {
       const result = await login({
         identifier: formData.identifier,
         password: formData.password
       });
-      
+
       if (result.success) {
         // Redirect to the intended page or dashboard
         const from = location.state?.from?.pathname || '/';
@@ -164,27 +164,25 @@ const SignIn = () => {
                   placeholder="Enter email, phone number, or organization ID"
                   value={formData.identifier}
                   onChange={handleInputChange}
-                  className={`pl-11 h-12 border-2 transition-all duration-200 focus:ring-2 focus:ring-blue-500/20 ${
-                    errors.identifier 
-                      ? 'border-red-400 focus:border-red-500 bg-red-50' 
+                  className={`pl-11 h-12 border-2 transition-all duration-200 focus:ring-2 focus:ring-blue-500/20 ${errors.identifier
+                      ? 'border-red-400 focus:border-red-500 bg-red-50'
                       : 'border-slate-200 focus:border-blue-400 hover:border-slate-300'
-                  }`}
+                    }`}
                 />
               </div>
               {errors.identifier && (
                 <p className="text-sm text-red-600 font-medium">{errors.identifier}</p>
               )}
               <div className="flex items-center mt-2">
-                <div className={`w-2 h-2 rounded-full mr-2 ${
-                  loginType === 'email' ? 'bg-blue-500' : 
-                  loginType === 'phone' ? 'bg-green-500' : 'bg-purple-500'
-                }`}></div>
+                <div className={`w-2 h-2 rounded-full mr-2 ${loginType === 'email' ? 'bg-blue-500' :
+                    loginType === 'phone' ? 'bg-green-500' : 'bg-purple-500'
+                  }`}></div>
                 <p className="text-xs text-slate-500 font-medium">
-                  {loginType === 'email' 
-                    ? 'Detected as email address' 
+                  {loginType === 'email'
+                    ? 'Detected as email address'
                     : loginType === 'phone'
-                    ? 'Detected as phone number'
-                    : 'Detected as organization ID'
+                      ? 'Detected as phone number'
+                      : 'Detected as organization ID'
                   }
                 </p>
               </div>
@@ -204,11 +202,10 @@ const SignIn = () => {
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`pl-11 pr-12 h-12 border-2 transition-all duration-200 focus:ring-2 focus:ring-blue-500/20 ${
-                    errors.password 
-                      ? 'border-red-400 focus:border-red-500 bg-red-50' 
+                  className={`pl-11 pr-12 h-12 border-2 transition-all duration-200 focus:ring-2 focus:ring-blue-500/20 ${errors.password
+                      ? 'border-red-400 focus:border-red-500 bg-red-50'
                       : 'border-slate-200 focus:border-blue-400 hover:border-slate-300'
-                  }`}
+                    }`}
                 />
                 <div
                   type="button"
@@ -233,7 +230,7 @@ const SignIn = () => {
             )}
 
             {/* Demo Account Button */}
-            <Button 
+            <Button
               type="button"
               onClick={() => {
                 setFormData({
@@ -249,8 +246,8 @@ const SignIn = () => {
             </Button>
 
             {/* Submit Button */}
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isLoading}
             >
@@ -267,8 +264,8 @@ const SignIn = () => {
             {/* Sign Up Link */}
             <div className="text-center text-base pt-4">
               <span className="text-slate-600">Don't have an account? </span>
-              <Link 
-                to="/signup" 
+              <Link
+                to="/signup"
                 className="text-blue-600 hover:text-blue-800 font-semibold hover:underline transition-colors duration-200"
               >
                 Sign Up
