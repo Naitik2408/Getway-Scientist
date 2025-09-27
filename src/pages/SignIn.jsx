@@ -194,13 +194,6 @@ const SignIn = () => {
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password" className="text-sm font-semibold text-slate-700">Password</Label>
-                <button
-                  type="button"
-                  onClick={handleForgotPassword}
-                  className="text-sm text-blue-600 hover:text-blue-800 hover:underline font-medium transition-colors duration-200"
-                >
-                  Forgot password?
-                </button>
               </div>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-slate-400" />
@@ -217,17 +210,17 @@ const SignIn = () => {
                       : 'border-slate-200 focus:border-blue-400 hover:border-slate-300'
                   }`}
                 />
-                <button
+                <div
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 transition-colors duration-200"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 transition-colors duration-200 cursor-pointer"
                 >
                   {showPassword ? (
                     <EyeOff className="h-5 w-5 text-slate-500" />
                   ) : (
                     <Eye className="h-5 w-5 text-slate-500" />
                   )}
-                </button>
+                </div>
               </div>
               {errors.password && <p className="text-sm text-red-600 font-medium">{errors.password}</p>}
             </div>
